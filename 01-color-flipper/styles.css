@@ -1,0 +1,82 @@
+:root {
+    --main-color: rgb(12, 140, 195);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px 0;
+    box-shadow: 1px 1px 5px #000;
+}
+
+.navbar .logo {
+    color: rgb(12, 140, 195);
+    letter-spacing: 3px;
+    font-size: 0.7rem;
+}
+
+.navbar .link a {
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    letter-spacing: 3px;
+}
+
+.navbar .link a:hover {
+    color: var(--main-color);
+}
+
+.main {
+    min-height: calc(100vh - 3rem);
+    display: grid;
+    place-items: center;
+}
+.main .container {
+    text-align: center;
+}
+
+.main .container h2 {
+    background-color: #000;
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 3rem;
+    border-radius: 10px;
+    margin-bottom: 2.5rem;
+}
+
+.main .container h2 span {
+    color:rgb(12, 140, 195);
+}
+
+.main .container .btn {
+    border: 2px solid #000;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background-color: transparent;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.main .container .btn-hero:hover {
+    background-color: #000;
+    transition: 0.3s;
+    color: #fff;
+}
+
+@media screen and (min-width: 900px) {
+    
+}
