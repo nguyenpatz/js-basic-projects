@@ -22,5 +22,4 @@ btnReset.addEventListener("click", function() {
     valueRemember = 0;
     mainDisplay.textContent = valueRemember;
     mainDisplay.style.color = "#000";
-
 });
