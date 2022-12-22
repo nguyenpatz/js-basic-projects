@@ -1,0 +1,106 @@
+:root {
+    --text-color: rgb(17, 75, 88);
+    --text-color2: hsl(211, 39%, 23%);
+    --text-color3: hsl(210, 22%, 49%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container .header {
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+.container .header h1 {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+.container .header h1 span {
+    border-bottom: 4px solid #0980ab;
+    padding-bottom: 10px;
+}
+
+.container .main {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.container .main .main-image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    display: flex;
+    z-index: 1;
+}
+
+.container .main .main-image::before {
+    content: "";
+    position: absolute;
+    top: -0.25rem;
+    left: 0.75rem;
+    border-radius: 50%;
+    background-color: aquamarine;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+}
+
+.container .main .main-image img {
+    object-fit: cover;
+    width: 150px;
+    border-radius: 50%;
+}
+
+
+#name {
+    color: var(--text-color);
+    letter-spacing: 3px;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+#job {
+    color: var(--text-color2);
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+#description {
+    color: var(--text-color3);
+    line-height: 20px;
+    padding: 10px 40px;
+}
+
+.button {
+    color: var(--text-color3);
+    background-color: transparent;
+    display: inline-block;
+}
+
+.left,
+.right {
+    border: none;
+    margin: 0 0.5rem;
+}
+
+.surprise {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media screen and (min-width: 900px) {
+    
+}
