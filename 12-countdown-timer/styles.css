@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600;700&family=Lobster&family=Share+Tech+Mono&display=swap');
+
+:root {
+    --font-family1: 'IBM Plex Mono', monospace;
+    --font-family2: 'Lobster', cursive;
+    --font-family3: 'Share Tech Mono', monospace;
+    --color1: #2C74B3;
+    --color2: #C0DEFF;
+    --background1: #6B728E;
+    --background2: #EAEAEA;
+    --background3: #7D6E83;
+    --background4: #16213E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    margin: 5rem auto;
+    gap: 3rem;
+    max-width: 95vw;
+}
+
+.container .image img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.right .header h2 {
+    font-family: var(--font-family1);
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: var(--color1);
+}
+
+.right .desc p {
+    font-family: var(--font-family3);
+    font-size: 1.7rem;
+    color: var(--background1);
+}
+
+.right .content {
+    margin: 20px 0;
+}
+
+.right .content p {
+    font-family: var(--font-family2);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--background4);
+}
+
+.format-container {
+    display: flex;
+}
+
+.format-container > div {
+    background-color: var(--background4);
+    margin: 30px 20px 0 0;
+    height: 5rem;
+    width: 5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.format-container > div > div {
+    font-family: var(--font-family3);
+}
+
+.format-container > div .num {
+    font-size: 2rem;
+}
+
+.format-container > div .text {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.format-container > div:not(:last-child) {
+}
+
+@media screen and (min-width: 800px){
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
