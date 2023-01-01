@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap");
+
+
+:root {
+    --color-1: #850E35;
+    --color-2: #0A2647;
+    --color-3: #EB455F;
+    --color-4: #3CCF4E;
+    --color-5: #DCD7C9;
+    --color-6: #C4DDFF;
+    --color-7: #6EBF8B;
+    --font-1: "Roboto";
+    --font-2: "Space Mono";
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    
+}
+
+.section-center {
+    margin: 150px auto;
+    box-shadow: 1px 1px 10px gray;
+    max-width: 50vw;
+    border-radius: 5px;
+    padding: 2rem;
+}
+
+.status-1 {
+    color: var(--color-7);
+}
+
+.status-2 {
+    color: var(--color-3);
+}
+
+.status {
+    /* display: none; */
+    visibility: hidden;
+}
+
+.status p {
+    
+}
+
+.status p,
+.header h1,
+.form button,
+.form input,
+.clear button {
+    font-family: var(--font-1);
+
+}
+
+.header {
+    margin-top: 10px;
+}
+
+.header h1 {
+    text-transform: capitalize;
+    color: var(--color-2);
+    letter-spacing: 3px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form input,
+.form button {
+    border-radius: 5px;
+}
+
+.form input,
+.form button,
+.clear button {
+    border: none;
+}
+
+.form input {
+    font-size: 1.3rem;
+    padding-left: 10px;
+    flex: 1 0 auto;
+}
+
+.form button {
+    padding: 5px;
+    background-color: var(--color-6);
+    font-size: 1rem;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.clear button {
+    background-color: transparent;
+    color: var(--color-1);
+}
+
+@media screen and (min-width: 800px){
+    
+}
