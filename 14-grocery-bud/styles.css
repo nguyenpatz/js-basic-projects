@@ -1,52 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap");
 
-
 :root {
-    --color-1: #850E35;
-    --color-2: #0A2647;
-    --color-3: #EB455F;
-    --color-4: #3CCF4E;
-    --color-5: #DCD7C9;
-    --color-6: #C4DDFF;
-    --color-7: #6EBF8B;
-    --font-1: "Roboto";
-    --font-2: "Space Mono";
+  --color-1: #850e35;
+  --color-2: #0a2647;
+  --color-3: #eb455f;
+  --color-4: #3ccf4e;
+  --color-5: #dcd7c9;
+  --color-6: #c4ddff;
+  --color-7: #6ebf8b;
+  --font-1: "Roboto";
+  --font-2: "Space Mono";
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    text-align: center;
-    
+  text-align: center;
 }
 
 .section-center {
-    margin: 150px auto;
-    box-shadow: 1px 1px 10px gray;
-    max-width: 50vw;
-    border-radius: 5px;
-    padding: 2rem;
+  margin: 150px auto;
+  box-shadow: 1px 1px 10px gray;
+  max-width: 50vw;
+  border-radius: 5px;
+  padding: 2rem;
 }
 
 .status-1 {
-    color: var(--color-7);
+  color: var(--color-7);
 }
 
 .status-2 {
-    color: var(--color-3);
+  color: var(--color-3);
 }
 
 .status {
-    /* display: none; */
-    visibility: hidden;
+  /* display: none; */
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .status p {
-    
+
 }
 
 .status p,
@@ -54,57 +55,99 @@
 .form button,
 .form input,
 .clear button {
-    font-family: var(--font-1);
-
+  font-family: var(--font-1);
 }
 
 .header {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .header h1 {
-    text-transform: capitalize;
-    color: var(--color-2);
-    letter-spacing: 3px;
+  text-transform: capitalize;
+  color: var(--color-2);
+  letter-spacing: 3px;
 }
 
 .form {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .form input,
 .form button {
-    border-radius: 5px;
+  border-radius: 5px;
 }
 
 .form input,
 .form button,
 .clear button {
-    border: none;
+  border: none;
 }
 
 .form input {
-    font-size: 1.3rem;
-    padding-left: 10px;
-    flex: 1 0 auto;
+  font-size: 1.3rem;
+  padding-left: 10px;
+  flex: 1 0 auto;
 }
 
 .form button {
-    padding: 5px;
-    background-color: var(--color-6);
-    font-size: 1rem;
+  padding: 5px;
+  background-color: var(--color-6);
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: capitalize;
 }
 
 .list {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .clear button {
-    background-color: transparent;
-    color: var(--color-1);
+  background-color: transparent;
+  color: var(--color-1);
 }
 
-@media screen and (min-width: 800px){
-    
+.list {
+  padding: 3rem 1rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  transition: 0.3s;
+}
+
+.list-item:hover {
+  background-color: var(--color-6);
+  border-radius: 10px;
+}
+
+.item-content {
+  font-family: var(--font-2);
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-edit {
+  margin-right: 5px;
+  color: var(--color-4);
+}
+
+.btn-delete {
+  color: var(--color-3);
+}
+
+.clear button {
+  cursor: pointer;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 800px) {
 }
