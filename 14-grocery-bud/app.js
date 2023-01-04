@@ -1,16 +1,19 @@
 const form = document.querySelector(".form");
 const input = document.querySelector("#input");
 const btnSubmit = document.querySelector("#submit");
+const btnClear = document.querySelector(".btn-clear");
 const list = document.querySelector(".list");
 const myStatus = document.querySelector(".status");
+let editFlag = "submit";
+let editId = "";
+
 form.addEventListener("submit", addItem);
-
-
+btnClear.addEventListener("click", clearItems);
+// window.addEventListener("DOMContentLoaded");
 function addItem(e) {
   e.preventDefault();
   const id = new Date().getTime().toString();
-  if(input.value !== "") {
-
+  if (input.value !== "" && editFlag == "submit") {
     // create li
     const li = document.createElement("li");
     li.setAttribute("class", "list-item");
@@ -29,12 +32,16 @@ function addItem(e) {
 
     list.appendChild(li);
     displayAlert(btnSubmit.textContent);
-    input.value= "";
+    setDefaultEverything();
 
     const btnDelete = li.querySelector(".btn-delete");
     btnDelete.addEventListener("click", deleteItem);
-  }
 
+    const btnEdit = li.querySelector(".btn-edit");
+    btnEdit.addEventListener("click", getId);
+  } else if (input.value !== "" && editFlag == "edit") {
+    editItem();
+  }
 }
 
 function displayAlert(content) {
@@ -66,11 +73,17 @@ function displayAlert(content) {
 
   myStatus.classList.add(myClass);
   myStatus.firstElementChild.textContent = myAlert;
-
-  setTimeout(function() {
+  setDefaultEverything();
+  setTimeout(function () {
     myStatus.classList.remove(myClass);
     myStatus.firstElementChild.textContent = "";
   }, 1000);
+}
+
+function setDefaultEverything() {
+  input.value = "";
+  editFlag = "submit";
+  btnSubmit.textContent = "submit";
 }
 
 function deleteItem(e) {
@@ -78,5 +91,34 @@ function deleteItem(e) {
   const idElement = element.dataset.id;
   displayAlert("delete");
   list.removeChild(element);
-  input.value= "";
+  input.value = "";
+}
+
+function getId(e) {
+  btnSubmit.textContent = "edit";
+  input.value = e.currentTarget.parentElement.parentElement.textContent
+    .toString()
+    .trim();
+  editFlag = "edit";
+  editId = e.currentTarget.parentElement.parentElement.dataset.id;
+}
+
+function editItem() {
+  const editElement = list.querySelector(`[data-id='${editId}']`);
+  editElement.firstElementChild.textContent = input.value;
+  displayAlert("edit");
+  setDefaultEverything();
+}
+
+function clearItems() {
+  const items = document.querySelectorAll(".list-item");
+  // console.log(items);
+  if (items.length > 0) {
+    items.forEach(function (item) {
+      list.removeChild(item);
+    });
+  }
+
+  btnClear.classList.add("hidden");
+  setDefaultEverything();
 }

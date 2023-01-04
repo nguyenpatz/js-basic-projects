@@ -32,14 +32,18 @@
 
 .status-1 {
   color: var(--color-7);
+  visibility: visible !important;
+
 }
 
 .status-2 {
   color: var(--color-3);
+  visibility: visible !important;
 }
 
 .status {
   /* display: none; */
+  visibility: hidden;
 }
 
 .hidden {
@@ -71,6 +75,7 @@
 .form {
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .form input,
@@ -150,4 +155,5 @@
 }
 
 @media screen and (min-width: 800px) {
+  
 }
