@@ -131,6 +131,7 @@
 
 .item-content {
   font-family: var(--font-2);
+  overflow: auto;
 }
 
 .btn {
